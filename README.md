@@ -1,3 +1,6 @@
+In this project, I used a free designed landing page for training purposes.
+https://www.figma.com/design/mVjpT84IChxhDcLq8Y0nDQ/Free-Landing-Page%2C-Desktop-%2B-Mobile---VC-(Community)?node-id=1-828&t=qjFrpCuDlRqkCkzW-0
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
