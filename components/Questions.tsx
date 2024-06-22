@@ -10,12 +10,12 @@ export default function Questions() {
   const [open6, setOpen6] = useState(false);
 
   return (
-    <div className="flex justify-center items-center m-8">
+    <div className="flex justify-center items-center m-8 flex-col">
       <h2 className="hidden sm:block text-4xl mb-12">Frequently asked questions</h2>
-      <article>  
+      <article className="max-w-[836px] w-full">  
         <div>
         <div>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4">
             How does the contact management feature help me keep track of clients and partners?
             </h4>
@@ -37,7 +37,7 @@ export default function Questions() {
             </div >
         </div>
 
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4">
               Can I customize the dashboards and reporting feature to display the metrics that are most important to my business?
             </h4>
@@ -60,7 +60,7 @@ export default function Questions() {
         </div>
 
         <div>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4">
               How does the task management feature help me delegate tasks to my team and track progress?
             </h4>
@@ -82,7 +82,7 @@ export default function Questions() {
             </div >
         </div>
         <div>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4">
             Can I collaborate with my team in real-time using all tools?
             </h4>
@@ -105,7 +105,7 @@ export default function Questions() {
         </div>
         
         <div>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4">
               Is this app avaliable on all devices?
             </h4>
@@ -128,7 +128,7 @@ export default function Questions() {
         </div>
 
         <div>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4">
             How does the app help me stay compliant when working with freelancers and contractors?
             </h4>
