@@ -19,7 +19,7 @@ const Pricing = () => {
       <h3 className="mb-6 text-4xl font-semibold ">Pricing</h3>
       <div className="bg-gray-200 rounded-xl p-2">
         <button
-          className={`rounded-md p-2 pr-3 pl-4 text-xl font-semibold transition ${
+          className={`rounded-md p-2 pr-3 pl-4 text-base font-semibold transition ${
             activeButton === "All" ? "bg-blue-500 text-white" : "text-black"
           }`}
           onClick={() => {
@@ -32,7 +32,7 @@ const Pricing = () => {
           All
         </button>
         <button
-          className={`rounded-md ml-6 p-2 pr-3 pl-4 text-xl font-semibold transition ${
+          className={`rounded-md  p-2 pr-3 pl-4 text-base font-semibold transition ${
             activeButton === "Getting started"
               ? "bg-blue-500 text-white"
               : "text-black"
@@ -47,7 +47,7 @@ const Pricing = () => {
           Getting started
         </button>
         <button
-          className={`rounded-md p-2 pr-3 pl-4 text-xl font-semibold transition ${
+          className={`rounded-md p-2 pr-3 pl-4 text-base font-semibold transition ${
             activeButton === "Pricing" ? "bg-blue-500 text-white" : "text-black"
           }`}
           onClick={() => {

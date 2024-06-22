@@ -9,8 +9,8 @@ const FeedChart1 = () => {
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   return (
-    <section className="mr-8 ml-8">
-      <Image src={Charts1} alt="charts1" />
+    <section className="mr-8 ml-8 flex justify-center items-center flex-col">
+      <Image src={Charts1} alt="charts1" className="flex justify-center items-center" />
       <article className="mt-8">
         <h1 className="text-4xl text-center mb-8 font-medium">
           Essential tools for propelling your buisness forward
