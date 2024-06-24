@@ -17,6 +17,9 @@ const config: Config = {
         customGray: "#494A4D",
         almostBlack: "#131316",
       },
+      height: {
+        "max-content": "max-content",
+      },
     },
   },
   plugins: [],

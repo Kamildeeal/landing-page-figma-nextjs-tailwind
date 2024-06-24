@@ -1,3 +1,4 @@
+import Carousel from "@/components/Caruseal";
 import Essential from "@/components/Essential";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Essential />
+      <Carousel />
       <Pricing />
       <Questions />
       <Footer />

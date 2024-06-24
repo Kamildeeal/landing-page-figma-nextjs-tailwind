@@ -2,9 +2,11 @@ import React from "react";
 
 const Free = () => {
   return (
-    <div className="bg-gray-200 rounded-2xl pl-6 pr-6 pt-6 pb-8 mt-8 mb-4">
+    <div className="bg-gray-200 rounded-2xl pl-6 pr-6 pt-6 pb-8 mt-8 mb-4 min-w-[343px] max-w-[400px] w-full">
       <div>
-        <h2 className="text-left text-3xl mb-2 font-semibold">Simple</h2>
+        <h2 className="text-left text-3xl mb-2 font-semibold sm:text-4xl">
+          Simple
+        </h2>
         <p className="text-left text-xl font-normal text-customGray">
           Keep track of your contacts, gain valuable insights, analyse live data
           and performance metrics.
