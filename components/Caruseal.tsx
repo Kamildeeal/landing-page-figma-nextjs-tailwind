@@ -59,19 +59,28 @@ const Carousel = () => {
 
   return (
     <section className="bg-almostBlack w-full">
-      <div className="max-w-[1280px] flex flex-col items-center justify-center mx-auto">
+      <div className="max-w-[1280px] flex flex-col items-center justify-center mx-auto p-2">
         <div className="flex flex-col items-center mx-6">
           <h2 className="text-white text-3xl w-min-[343px] w-max-[767px] text-center mt-10 mb-5">
             See how it works and get started in less than 2 minutes
           </h2>
-          <div>
-            <Image src={carouselImg} alt="carouselImg" />
+          <div className="flex flex-col mx-auto w-full max-w-[900px]">
+            <Image
+              src={carouselImg}
+              alt="charts"
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
           </div>
+
           <button className="w-full max-w-[343px] bg-blue-400 text-white h-16 rounded-3xl font-semibold text-lg mt-10 mb-14 hover:bg-blue-500 lg:w-auto lg:px-8 lg:py-4">
             Get Started
           </button>
-          <div className="w-full bg-gray-600 h-0.5"></div>
         </div>
+        <div className="w-full bg-gray-600 h-0.5 "></div>
       </div>
       <div>
         <h2 className="text-white text-3xl w-min-[343px] w-max-[767px] mx-6 text-left mt-10 mb-5 sm:max-w-[800px] sm:mx-[102px] sm:text-5xl sm:my-12 sm:leading-snug">
@@ -122,7 +131,16 @@ const Carousel = () => {
             <p className=" text-almostBlack mt-1">Capodopera</p>
           </div>
           <div className="bg-white px-6 py-8 rounded-lg mb-6 mx-6 sm:max-w-[380px] flex-shrink-0 text-base sm:text-[1.25rem]">
-            <p className=" text-almostBlack">Lorem60</p>
+            <p className=" text-almostBlack">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+              repudiandae consequatur veritatis cumque consequuntur laudantium
+              obcaecati nobis aliquam eveniet esse ipsum et atque harum,
+              reiciendis officia laboriosam hic placeat. Voluptas rem fuga cum
+              non recusandae similique numquam quas aut enim? Libero voluptatem
+              dolore quis, esse aliquid inventore sint quibusdam harum rerum
+              assumenda quisquam iste optio magnam perspiciatis sit officia
+              consectetur.
+            </p>
             <p className="font-semibold text-almostBlack mt-6">
               Katherine Smith
             </p>
