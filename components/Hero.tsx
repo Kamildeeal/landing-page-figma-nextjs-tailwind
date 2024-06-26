@@ -16,10 +16,11 @@ function Hero() {
           one-stop-shop startup growth tool.
         </p>
         <div className="mx-auto w-full flex flex-col justify-center items-center lg:flex-row lg:justify-start lg:gap-4">
-          <button className="w-full max-w-[343px] bg-blue-400 text-white h-16 rounded-3xl font-semibold text-lg mb-4 hover:bg-blue-500 lg:w-auto lg:px-8 lg:py-4">
+          <button className=" z-50 w-full cursor-pointer max-w-[343px] bg-blue-400 text-white h-16 rounded-3xl font-semibold text-lg mb-4 hover:bg-blue-500 lg:w-auto lg:px-8 lg:py-4">
             Get Started
           </button>
-          <button className="flex items-center justify-center align-middle w-full max-w-[343px] bg-gray-100 text-black font-semibold  h-16 rounded-3xl font-lg text-lg mb-4 hover:bg-gray-300  lg:w-auto lg:px-8 lg:py-4">
+
+          <button className="z-50 flex cursor-pointer items-center justify-center align-middle w-full max-w-[343px] bg-gray-100 text-black font-semibold  h-16 rounded-3xl font-lg text-lg mb-4 hover:bg-gray-300  lg:w-auto lg:px-8 lg:py-4">
             <Image src={Demo} alt="demo" className="mr-3" />
             Book a demo
           </button>

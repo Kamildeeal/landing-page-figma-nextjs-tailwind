@@ -82,7 +82,7 @@ const Carousel = () => {
         </div>
         <div className="w-full bg-gray-600 h-0.5 "></div>
       </div>
-      <div>
+      <div className="max-w-[1280px] flex flex-col items-center justify-center mx-auto p-2">
         <h2 className="text-white text-3xl w-min-[343px] w-max-[767px] mx-6 text-left mt-10 mb-5 sm:max-w-[800px] sm:mx-[102px] sm:text-5xl sm:my-12 sm:leading-snug">
           Don&apos;t just take our word for it, see the success stories from
           businesses just like yours.

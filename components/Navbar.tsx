@@ -52,7 +52,7 @@ function Navbar() {
                 <div className="bg-white border-almostBlack border-4 border-solid mx-auto w-[60vw] p-10 z-30 rounded-xl shadow-xl relative">
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="absolute top-3 right-3 p-2 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none"
+                    className="absolute top-3 right-3 p-2 rounded-full cursor-pointer bg-gray-200 hover:bg-gray-300 focus:outline-none"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

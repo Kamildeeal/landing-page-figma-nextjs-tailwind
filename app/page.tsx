@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Pricing from "@/components/Pricing";
 import Questions from "@/components/Questions";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (

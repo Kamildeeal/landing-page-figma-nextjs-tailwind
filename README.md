@@ -1,5 +1,15 @@
-In this project, I used a free designed landing page for training purposes.
+In this project, I used a free designed landing page from Figma -
 https://www.figma.com/design/mVjpT84IChxhDcLq8Y0nDQ/Free-Landing-Page%2C-Desktop-%2B-Mobile---VC-(Community)?node-id=1-828&t=qjFrpCuDlRqkCkzW-0
+
+The app is fully responsive(mobile, smile, lg screens), built on top of Next.js with Tailwind for styling.
+
+The application features:
+
+- full responsiveness, allowing both the interface and images to adjust perfectly to any screen size
+- mobile/desktop navbar
+- interactive tooltips (essentials, pricing, questions sections)
+- contextual hints that open to guide users
+- caruseal on dekstop with users comments
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
