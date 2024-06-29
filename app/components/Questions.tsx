@@ -1,13 +1,26 @@
 "use client";
 import { useState } from "react";
 
+interface OpenSections {
+  [key: string]: boolean;
+}
+
 export default function Questions() {
-  const [open1, setOpen1] = useState(true);
-  const [open2, setOpen2] = useState(false);
-  const [open3, setOpen3] = useState(false);
-  const [open4, setOpen4] = useState(false);
-  const [open5, setOpen5] = useState(false);
-  const [open6, setOpen6] = useState(false);
+  const [openSections, setOpenSections] = useState<OpenSections>({
+    section1: true,
+    section2: false,
+    section3: false,
+    section4: false,
+    section5: false,
+    section6: false,
+  });
+
+  const toggleSection = (section: string) => {
+    setOpenSections((prevSections) => ({
+      ...prevSections,
+      [section]: !prevSections[section],
+    }));
+  };
 
   return (
     <div className="flex justify-center items-center m-8 flex-col">
@@ -24,12 +37,12 @@ export default function Questions() {
               </h4>
               <span
                 className="text-2xl font-semibold text-black cursor-pointer"
-                onClick={() => setOpen1((prev) => !prev)}
+                onClick={() => toggleSection("section1")}
               >
-                {open1 ? "✕" : "+"}
+                {openSections.section1 ? "✕" : "+"}
               </span>
             </div>
-            {open1 && (
+            {openSections.section1 && (
               <p className="text-base text-customGray sm:text-lg">
                 Keep track of your contacts, gain valuable insights, analyse
                 live data and performance metrics.
@@ -37,7 +50,7 @@ export default function Questions() {
             )}
             <div
               className={`h-0.5 w-full mt-4 mb-4 ${
-                open1 ? "bg-almostBlack" : "bg-gray-300"
+                openSections.section1 ? "bg-almostBlack" : "bg-gray-300"
               }`}
             ></div>
           </div>
@@ -49,19 +62,19 @@ export default function Questions() {
             </h4>
             <span
               className="text-2xl font-semibold text-black cursor-pointer"
-              onClick={() => setOpen2((prev) => !prev)}
+              onClick={() => toggleSection("section2")}
             >
-              {open2 ? "✕" : "+"}
+              {openSections.section2 ? "✕" : "+"}
             </span>
           </div>
-          {open2 && (
+          {openSections.section2 && (
             <p className="text-base text-customGray sm:text-lg">
               Of course you can! This is special feature in our offer.
             </p>
           )}
           <div
             className={`h-0.5 w-full mt-4 mb-4 ${
-              open2 ? "bg-almostBlack" : "bg-gray-300"
+              openSections.section2 ? "bg-almostBlack" : "bg-gray-300"
             }`}
           ></div>
         </div>
@@ -74,19 +87,19 @@ export default function Questions() {
             </h4>
             <span
               className="text-2xl font-semibold text-black cursor-pointer"
-              onClick={() => setOpen3((prev) => !prev)}
+              onClick={() => toggleSection("section3")}
             >
-              {open3 ? "✕" : "+"}
+              {openSections.section3 ? "✕" : "+"}
             </span>
           </div>
-          {open3 && (
+          {openSections.section3 && (
             <p className="text-base text-customGray sm:text-lg">
               Time is money, you will be able to to it quicker!
             </p>
           )}
           <div
             className={`h-0.5 w-full mt-4 mb-4 ${
-              open3 ? "bg-almostBlack" : "bg-gray-300"
+              openSections.section3 ? "bg-almostBlack" : "bg-gray-300"
             }`}
           ></div>
         </div>
@@ -97,19 +110,19 @@ export default function Questions() {
             </h4>
             <span
               className="text-2xl font-semibold text-black cursor-pointer"
-              onClick={() => setOpen4((prev) => !prev)}
+              onClick={() => toggleSection("section4")}
             >
-              {open4 ? "✕" : "+"}
+              {openSections.section4 ? "✕" : "+"}
             </span>
           </div>
-          {open4 && (
+          {openSections.section4 && (
             <p className="text-base text-customGray sm:text-lg">
               Yes, limitless!
             </p>
           )}
           <div
             className={`h-0.5 w-full mt-4 mb-4 ${
-              open4 ? "bg-almostBlack" : "bg-gray-300"
+              openSections.section4 ? "bg-almostBlack" : "bg-gray-300"
             }`}
           ></div>
         </div>
@@ -117,23 +130,23 @@ export default function Questions() {
         <div>
           <div className="flex flex-row gap-10 justify-between">
             <h4 className="text-almostBlack font-semibold text-lg mb-4 sm:text-xl">
-              Is this app avaliable on all devices?
+              Is this app available on all devices?
             </h4>
             <span
               className="text-2xl font-semibold text-black cursor-pointer"
-              onClick={() => setOpen5((prev) => !prev)}
+              onClick={() => toggleSection("section5")}
             >
-              {open5 ? "✕" : "+"}
+              {openSections.section5 ? "✕" : "+"}
             </span>
           </div>
-          {open5 && (
+          {openSections.section5 && (
             <p className="text-base text-customGray sm:text-lg">
               We are working on it.
             </p>
           )}
           <div
             className={`h-0.5 w-full mt-4 mb-4 ${
-              open5 ? "bg-almostBlack" : "bg-gray-300"
+              openSections.section5 ? "bg-almostBlack" : "bg-gray-300"
             }`}
           ></div>
         </div>
@@ -146,17 +159,17 @@ export default function Questions() {
             </h4>
             <span
               className="text-2xl font-semibold text-black cursor-pointer"
-              onClick={() => setOpen6((prev) => !prev)}
+              onClick={() => toggleSection("section6")}
             >
-              {open6 ? "✕" : "+"}
+              {openSections.section6 ? "✕" : "+"}
             </span>
           </div>
-          {open6 && (
+          {openSections.section6 && (
             <p className="text-base text-customGray sm:text-lg">In process..</p>
           )}
           <div
             className={`h-0.5 w-full mt-4 mb-4 ${
-              open6 ? "bg-almostBlack" : "bg-gray-300"
+              openSections.section6 ? "bg-almostBlack" : "bg-gray-300"
             }`}
           ></div>
         </div>
