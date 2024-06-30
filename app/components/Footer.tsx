@@ -15,7 +15,7 @@ const Footer = () => {
               next level.
             </p>
             <div className="mt-4 flex justify-between text-center tems-center">
-              <button className="border border-gray-400 rounded-xl pl-3 pr-3 pt-3 pb-3">
+              <button className="border border-gray-400 rounded-xl pl-3 pr-3 pt-3 pb-3 transition hover:bg-slate-300">
                 Enter your email
               </button>
               <button className="pl-3 pr-3 pt-3 pb-3 bg-blue-400 text-white rounded-xl font-semibold text-base hover:bg-blue-500">
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         <div className="text-gray-300 font-semibold flex flex-col text-start items-start">
           <h4 className="text-xl mb-5">LinkedIn & X</h4>
-          <p className="text-sm">&copy; 2023 Growth. All rights reserved</p>
+          <p className="text-sm">&copy; 2024 Growth. All rights reserved</p>
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 "use client";
-
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 type RevealProps = {
   children: React.ReactNode;
@@ -12,7 +11,6 @@ export default function Reveal({
   children,
   width = "fit-content",
 }: RevealProps) {
-  const [mounted, setMounted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -20,7 +18,6 @@ export default function Reveal({
 
   useEffect(() => {
     if (isInView) {
-      setMounted(true);
       mainControls.start("visible");
       slideControls.start("visible");
     }
@@ -33,8 +30,7 @@ export default function Reveal({
         position: "relative",
         width,
         overflow: "hidden",
-        marginRight: "auto",
-        marginLeft: "auto",
+        margin: "auto",
       }}
     >
       <motion.div
@@ -72,7 +68,7 @@ export default function Reveal({
           bottom: 4,
           left: 0,
           right: 0,
-          background: "var(--primary)",
+          background: "rgba(160, 194, 210, 1)",
           zIndex: 20,
         }}
       />

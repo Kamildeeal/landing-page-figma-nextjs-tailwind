@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import BarAnimation from "@/app/animations/BarAnimation";
 import Charts2 from "@/public/mobile/Charts2.svg";
 
 const FeedChart1 = () => {
@@ -11,24 +11,31 @@ const FeedChart1 = () => {
   return (
     <section className="mr-8 ml-8  flex justify-center items-center flex-col ">
       <article className="mt-8">
-        <h1 className="text-4xl text-center mb-8 font-medium sm:text-5xl sm:w-max-[836px]">
-          Essential tools for propelling your buisness forward
-        </h1>
-        <p className="text-center text-base font-normal text-customGray">
-          Streamline your operations, boost productivity and drive growth with
-          our own essential tools
-        </p>
+        <BarAnimation>
+          <h1 className="text-4xl text-center mb-8 font-medium sm:text-5xl sm:w-max-[836px]">
+            Essential tools for propelling your buisness forward
+          </h1>
+        </BarAnimation>
+        <BarAnimation>
+          <p className="text-center text-base font-normal text-customGray">
+            Streamline your operations, boost productivity and drive growth with
+            our own essential tools
+          </p>
+        </BarAnimation>
       </article>
       <article className="max-w-[1440px] mt-8 flex flex-col lg:flex-row lg:mx-16 lg:justify-between lg:gap-5">
         <div className="min-w-[343px] max-w-[513.5px] lg:flex-1">
-          <h3 className="text-2xl font-semibold mb-4 text-left sm:text-4xl">
-            Dashboard and reporting
-          </h3>
-          <p className="text-left text-base font-normal text-customGray mb-4">
-            Gain valuable insights with real-time monitoring. Track key
-            performance indicators and make data-driven decisions.
-          </p>
-
+          <BarAnimation>
+            <h3 className="text-2xl font-semibold mb-4 text-left sm:text-4xl">
+              Dashboard and reporting
+            </h3>
+          </BarAnimation>
+          <BarAnimation>
+            <p className="text-left text-base font-normal text-customGray mb-4">
+              Gain valuable insights with real-time monitoring. Track key
+              performance indicators and make data-driven decisions.
+            </p>
+          </BarAnimation>
           <div>
             <div
               className="flex justify-between mb-3 text-left items-center"
@@ -76,7 +83,7 @@ const FeedChart1 = () => {
               className="flex justify-between mb-3 text-center items-center"
               onClick={() => setIsOpen3((prev) => !prev)}
             >
-              <h4 className="text-xl cursor-pointer hover:underline">
+              <h4 className="text-xl cursor-pointer hover:underline sm:text-2xl">
                 Alerts and notifications
               </h4>
               {isOpen3 && (

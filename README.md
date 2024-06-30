@@ -1,7 +1,7 @@
 In this project, I used a free designed landing page from Figma -
 https://www.figma.com/design/mVjpT84IChxhDcLq8Y0nDQ/Free-Landing-Page%2C-Desktop-%2B-Mobile---VC-(Community)?node-id=1-828&t=qjFrpCuDlRqkCkzW-0
 
-The app is fully responsive(mobile, smile, lg screens), built on top of Next.js with Tailwind for styling.
+The app is fully responsive (mobile, small, large screens), built on top of Next.js with Tailwind for styling. Added animations for better UI.
 
 The application features:
 
