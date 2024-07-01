@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import carouselImg from "@/public/mobile/carusel.png";
@@ -6,18 +7,20 @@ import Appear from "@/app/animations/AppearHeader";
 import FromUpAnimate from "@/app/animations/FromUpAnimate";
 
 const Carousel = () => {
-  const carouselRef = useRef<any>(null);
-  const [isDown, setIsDown] = useState<any>(false);
-  const [startX, setStartX] = useState<any>(null);
-  const [scrollLeft, setScrollLeft] = useState<any>(null);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+  const [isDown, setIsDown] = useState<boolean>(false);
+  const [startX, setStartX] = useState<number | null>(null);
+  const [scrollLeft, setScrollLeft] = useState<number | null>(null);
 
   useEffect(() => {
     const carousel = carouselRef.current;
 
-    const mouseDownHandler = (e: any) => {
+    const mouseDownHandler = (e: MouseEvent) => {
       setIsDown(true);
-      setStartX(e.pageX - carousel.offsetLeft);
-      setScrollLeft(carousel.scrollLeft);
+      if (carousel) {
+        setStartX(e.pageX - carousel.offsetLeft);
+        setScrollLeft(carousel.scrollLeft);
+      }
     };
 
     const mouseLeaveHandler = () => {
@@ -28,34 +31,40 @@ const Carousel = () => {
       setIsDown(false);
     };
 
-    const mouseMoveHandler = (e: any) => {
-      if (!isDown) return;
+    const mouseMoveHandler = (e: MouseEvent) => {
+      if (!isDown || startX === null || scrollLeft === null) return;
       e.preventDefault();
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.5; // adjust scroll speed
-      carousel.scrollLeft = scrollLeft - walk;
+      if (carousel) {
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5; // adjust scroll speed
+        carousel.scrollLeft = scrollLeft - walk;
 
-      // Limit scrolling within carousel boundaries
-      const minScrollLeft = 0;
-      const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-      if (carousel.scrollLeft < minScrollLeft) {
-        carousel.scrollLeft = minScrollLeft;
-      }
-      if (carousel.scrollLeft > maxScrollLeft) {
-        carousel.scrollLeft = maxScrollLeft;
+        // Limit scrolling within carousel boundaries
+        const minScrollLeft = 0;
+        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+        if (carousel.scrollLeft < minScrollLeft) {
+          carousel.scrollLeft = minScrollLeft;
+        }
+        if (carousel.scrollLeft > maxScrollLeft) {
+          carousel.scrollLeft = maxScrollLeft;
+        }
       }
     };
 
-    carousel.addEventListener("mousedown", mouseDownHandler);
-    carousel.addEventListener("mouseleave", mouseLeaveHandler);
-    carousel.addEventListener("mouseup", mouseUpHandler);
-    carousel.addEventListener("mousemove", mouseMoveHandler);
+    if (carousel) {
+      carousel.addEventListener("mousedown", mouseDownHandler);
+      carousel.addEventListener("mouseleave", mouseLeaveHandler);
+      carousel.addEventListener("mouseup", mouseUpHandler);
+      carousel.addEventListener("mousemove", mouseMoveHandler);
+    }
 
     return () => {
-      carousel.removeEventListener("mousedown", mouseDownHandler);
-      carousel.removeEventListener("mouseleave", mouseLeaveHandler);
-      carousel.removeEventListener("mouseup", mouseUpHandler);
-      carousel.removeEventListener("mousemove", mouseMoveHandler);
+      if (carousel) {
+        carousel.removeEventListener("mousedown", mouseDownHandler);
+        carousel.removeEventListener("mouseleave", mouseLeaveHandler);
+        carousel.removeEventListener("mouseup", mouseUpHandler);
+        carousel.removeEventListener("mousemove", mouseMoveHandler);
+      }
     };
   }, [isDown, startX, scrollLeft]);
 

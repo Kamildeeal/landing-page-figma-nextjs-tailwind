@@ -1,17 +1,17 @@
-import Carousel from "@/app/components/Caruseal";
-import Essential from "@/app/components/Essential";
-import Footer from "@/app/components/Footer";
-import Hero from "@/app/components/Hero";
+import Carousel from "@/app/components/opinions/Caruseal";
+import Hero from "@/app/views/Hero";
 import Navbar from "@/app/components/navbar/Navbar";
-import Pricing from "@/app/components/Pricing";
-import Questions from "@/app/components/Questions";
+import Pricing from "@/app/views/Pricing";
+import Essentials from "@/app/views/Essentials";
+import Questions from "@/app/views/Questions";
+import Footer from "@/app/views/Footer";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <Essential />
+      <Essentials />
       <Carousel />
       <Pricing />
       <Questions />
